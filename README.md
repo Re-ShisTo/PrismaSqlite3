@@ -35,3 +35,9 @@ npx prisma init --datasource-provider sqlite
 ```bash
 npx prisma init
 ```
+
+7. Initiate Migration
+
+```bash
+npx prisma migrate dev --name init
+```
