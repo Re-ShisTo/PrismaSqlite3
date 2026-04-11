@@ -41,3 +41,37 @@ npx prisma init
 ```bash
 npx prisma migrate dev --name init
 ```
+
+8. Generate Connection for the first time or after any modification
+
+```bash
+npx prisma generate
+```
+
+9. Import A reference of PrismaClient, BetterSqlite/<SQL you used>
+
+```bash
+const { PrismaClient } = require("@prisma/client");
+const {
+  prismaBetterSqlite,
+  PrismaBetterSqlite3,
+} = require("@prisma/adapter-better-sqlite3");
+```
+
+10. Load the <SQL> with the path url in adapter and enclosure the dapter in PrismaClient.
+
+```bash
+const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
+const prisma = new PrismaClient({ adapter });
+```
+
+11. Before running any function in .js file check if there is a output path for the generated client. If it's there then delete it.
+
+12. Then run:
+
+```bash
+npx prisma generate
+node index.js
+```
+
+13. `Precaution` check if you called the main() function in your .js file.
