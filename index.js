@@ -9,8 +9,16 @@ const prisma = new PrismaClient({ adapter });
 
 async function main() {
   try {
+    const newContact = await prisma.contact.create({
+      data: {
+        name: "Joyeta Ranjan Chakma",
+        email: "joyetaranjachakma@email.com",
+        message: "I am a bharal",
+      },
+    });
+    console.log("Contact Loaded", newContact);
   } catch (error) {
-    console.log(error.mesage(error) || error);
+    console.log(error.message || error);
   } finally {
     await prisma.$disconnect();
   }

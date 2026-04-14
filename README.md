@@ -50,7 +50,7 @@ npx prisma generate
 
 9. Import A reference of PrismaClient, BetterSqlite/<SQL you used>
 
-```bash
+```js
 const { PrismaClient } = require("@prisma/client");
 const {
   prismaBetterSqlite,
@@ -60,7 +60,7 @@ const {
 
 10. Load the <SQL> with the path url in adapter and enclosure the dapter in PrismaClient.
 
-```bash
+```js
 const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
 const prisma = new PrismaClient({ adapter });
 ```
