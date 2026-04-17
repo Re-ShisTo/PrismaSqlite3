@@ -1,54 +1,54 @@
 ## Prisma installation with CLI
 
-1. Initiate npm
+1. Initiate npm.
 
 ```bash
 npm init -y
 ```
 
-2. Install prisma
+2. Install prisma.
 
 ```bash
 npm i prisma --save-dev
 ```
 
-3. Install prisma client
+3. Install prisma client.
 
 ```bash
 npm i @prisma/client
 ```
 
-4. Install prisma adapter for any SQL
+4. Install prisma adapter for any SQL.
 
 ```bash
 npm i @prisma/client-better-sqlite better-sqlite3
 ```
 
-5. Initiate prisma with data source provider for any SQL
+5. Initiate prisma with data source provider for any SQL.
 
 ```bash
 npx prisma init --datasource-provider sqlite
 ```
 
-6. If you dont provide any data source prvider then by default it set the provider as PostgreSQL
+6. If you dont provide any data source prvider then by default it set the provider as PostgreSQL.
 
 ```bash
 npx prisma init
 ```
 
-7. Initiate Migration
+7. Initiate Migration. It is required to run each time for any structural change made in the prisma file.
 
 ```bash
 npx prisma migrate dev --name init
 ```
 
-8. Generate Connection for the first time or after any modification
+8. Generate Connection for the first time or after any modification.
 
 ```bash
 npx prisma generate
 ```
 
-9. Import A reference of PrismaClient, BetterSqlite/<SQL you used>
+9. Import A reference of PrismaClient, BetterSqlite/<SQL you used>.
 
 ```js
 const { PrismaClient } = require("@prisma/client");
