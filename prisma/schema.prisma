@@ -21,7 +21,7 @@ model Contact {
 model Author{
   id Int @id @default(autoincrement())
   name String
-  bio String?
+  bio String
   books Book[]
 }
 model Book{

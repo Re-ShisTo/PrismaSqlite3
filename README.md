@@ -75,3 +75,31 @@ node index.js
 ```
 
 13. `Precaution` check if you called the main() function in your .js file.
+
+---
+
+## Migration of program from SQLite to mySQL
+
+1. Create a brach with git.
+
+```bash
+git checkout -b mySQL
+```
+
+2. Connectto to mySQL.
+
+```bash
+mysql -u root -p -h 127.0.0.1
+```
+
+3. Create the database.
+
+```bash
+create database prisma2;
+```
+
+4. Change database_url in .env file
+
+```js
+DATABASE_URL = "mysql://<user>:<passowrd>@localhost:<port>/<name>";
+```
