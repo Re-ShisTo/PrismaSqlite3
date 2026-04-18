@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.7.0",
+    "@prisma/adapter-mariadb": "^7.7.0",
     "@prisma/client": "^7.7.0",
-    "better-sqlite3": "^12.8.0"
+    "better-sqlite3": "^12.8.0",
+    "mysql2": "^3.22.1"
   }
 }
