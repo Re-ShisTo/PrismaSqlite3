@@ -65,7 +65,12 @@ const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
 const prisma = new PrismaClient({ adapter });
 ```
 
-11. Before running any function in .js file check if there is a output path for the generated client. If it's there then delete it.
+11. Before running any function in .js file check if there is a output path for the generated client in schema.prisma fiel. If it's there then delete it. Also check if the privider has "prisma-client-js".
+```js
+generator client {
+  provider = "prisma-client-js"
+}
+```
 
 12. Then run:
 
