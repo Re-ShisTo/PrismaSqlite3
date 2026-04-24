@@ -21,7 +21,7 @@ npm i @prisma/client
 4. Install prisma adapter for any SQL.
 
 ```bash
-npm i @prisma/client-better-sqlite better-sqlite3
+npm install @prisma/adpater-better-sqlite3 better-sqlite3
 ```
 
 5. Initiate prisma with data source provider for any SQL.
